@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+        <link rel="shortcut icon" href="./heart-icon.png" type="image/x-icon">
+
+        <title> H vs P</title>
+    </head>
+    <body>
+        <div class="app">
+            <div class="card mg-10" >
+                <div class="card__title">
+                    <div class="col_third" id="heart">	
+                        <i class="fa fa-heart fa-8x"></i>
+                    </div>
+                    <div class="card__title--name" id="card1">
+                        <h1 id="title-name"> Chúc em và gia đình năm mới 2022 thật hạnh phúc ! </h1>
+                    </div>
+
+                    <div id="iloveu" class="i-love-u">
+                        <h1 style="color: red;"> 
+                            Anh yêu em!!!
+                        </h1>
+                        <h1>
+                            😘😘😘
+                        </h1>
+                        <h1 style="color: red;">
+                            Rất nhiều.
+                        </h1>
+                        <div style="height: 30px;"></div>
+                    </div>
+                  
+                </div>
+                <div class="button__list mt-10"  id="btn-Next">
+                    <div class="row">
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__message btn_next" onclick="btnNextClick()">
+                                <span>Next</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
+
+                <div class="button__list mt-10" id="btn-CoKhong" style="display: none;" >
+                    <div class="row">
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__message btnNo"  onclick="showMess()">
+                                <span> Có </span>
+                            </div>
+                        </div>
+                        <div class="col col-lg-6 mt-10">
+                            <div class="button button__subscribe btnNo" id="btn-No" onclick="onclickKhong()">
+                                <span> Không </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script >
+            var index = 0;
+
+            function showMess()
+            {
+                document.getElementById("card1").style.display = 'none';
+                document.getElementById("iloveu").style.display = "flex";
+                document.getElementById("btn-CoKhong").style.display = 'none'
+            }
+
+            function  btnNextClick()
+            {
+                if (index == 0) {
+                    document.getElementById("title-name").innerHTML ="Năm mới, anh rất muốn có một khởi đầu mới cùng em.";
+                }
+
+                if (index == 1) {
+                    document.getElementById("title-name").style.color = 'red'
+                    document.getElementById("title-name").style.textAlign = 'center'
+                    document.getElementById("title-name").innerHTML ="Làm người yêu anh, em nhé !!!";
+
+                    document.getElementById("btn-CoKhong").style.display = 'inline'
+                    document.getElementById("btn-Next").style.display = 'none'
+                }
+               
+                index++
+                
+            }
+            var changeText = false;
+            function  onclickKhong(){
+                if (!changeText) {
+                    document.getElementById("btn-No").innerHTML ="Em yêu anh";
+                    changeText = true;
+                }else{
+                    showMess();
+                }
+            }
+
+        </script>
+    </body>
+</html>
