@@ -1616,9 +1616,12 @@ img {
     border: 0;
     outline: none;
     position: absolute;
-    left: -41px;
-    top: 90px;
+    /* left: -41px; */
+    /* top: 90px; */
     z-index: 20;
+    top: 0;
+    right: 0;
+
   }
   .site-header #navbar .close-navbar .ti-close {
     position: relative;
@@ -1631,7 +1634,8 @@ img {
     padding: 10px 15px 10px 35px;
   }
   .site-header .slideInn {
-    right: 0 !important;
+    /* right: 0 !important; */
+    left: 0 !important;
   }
 }
 
@@ -1700,7 +1704,7 @@ img {
 .header-style-1 .topbar {
   background: #fff;
   text-align: center;
-  padding: 50px 0 30px;
+  padding: 20px 0 15px;
   border-bottom: 1px solid #efefef;
   position: relative;
   z-index: 1;
@@ -1708,7 +1712,7 @@ img {
 
 @media (max-width: 991px) {
   .header-style-1 .topbar {
-    padding: 40px 0 30px;
+    padding: 20px 0 15px;
   }
 }
 
@@ -2215,7 +2219,7 @@ img {
 .hero-slider {
   width: 100%;
   height: calc(100vh - 210px);
-  min-height: 650px;
+  min-height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
